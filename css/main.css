@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+--index: calc(1vh + 2vw);
+}
+@font-face {
+    font-family: raleway_f;
+    src: url("../fonts/raleway-regular.woff2");
+}
+@font-face {
+    font-family: raleway_f;
+    src: url("../fonts/raleway-black.woff2");
+    font-weight: 900;
+}
+body {
+    background-color: #010101;
+    color: #ffffff;
+    font-family: raleway_f, sans-serif;
+    line-height: 1.55;
+    z-index: 0;
+}
+.main-header {
+    position: relative;
+}
+.layers {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    z-index:auto;
+}
+.layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center
+}
+.layer__header {
+    z-index: 1;
+    transform: translate3d(0, calc(var(--scrollTop)/2), 0);
+    will-change: trasform;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.layer__title {
+    font-size: var(--index);
+}
+
+.layers__base {
+transform: translate3d(0, calc(var(--scrollTop)/2), 0);
+}
+.main-article {
+    min-height: 100vh;
+}
